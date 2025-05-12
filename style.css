@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.max-width {
+    max-width: 1440px;
+}
+
+header {
+    background-color: #FF8000;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-section {
+    overflow: auto;
+}
+
+.logo {
+    height: 50px;
+}
+
+.background-div {
+    height: 2000px;
+    background-color: aquamarine;
+    width: 100%;
+}
+
+.order-section {
+    height: 100vh;
+    width: 200px;
+    position: sticky;
+    top: 0;
+    
+    background-color: white;
+
+}
