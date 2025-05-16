@@ -7,25 +7,52 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="loadDishes()">
     <header>
         <img class="logo" src="/img/icons/Logo.png" alt="">
-        <img class="logo" src="/img/icons/dropdown-menu.png" alt="">
+        <img class="logo-menu" onclick="menu()" src="/img/icons/dropdown-menu.png" alt="">
     </header>
-    <div class="main-section">
+    <div class="main-section">      
         <div>
-            <div class="background-div">
+            <div class="main-page main-page-close" id="main-page">
+                <div class="mp-backgrund-img1">
+                </div>
+                <div class="mp-infos">
+                    <h2>Chicken Joe`s Chicken and more</h2>
+                    <div class="mp-chickenjoe"><img src="/img/background/chicken-joe.jpg" alt=""></div>
+                    <p class="mp-reviews">Bewertungen ( 4.7 / 5 Sternen ) </p>
+                    <div class="mp-links">
+                        <img class="mp-arrow" src="/img/background/arrow-point-to-right.png" alt="">
+                        <a class="mp-info-link" href="#chicken">Chicken</a> |
+                        <a class="mp-info-link" href="#pizza">Pizza</a> |
+                        <a class="mp-info-link" href="#sushi">Sushi</a>
+                    </div>
+                </div>
+                <div class="order-chicken">
+                    <div class="order-chicken-background" id="chicken"></div>
+                    <h2 class="h2-margin">Chicken</h2>
+                </div>
+                <div class="order-render-chicken" id="render-chicken"></div>
+                <div class="order-Pizza">
+                    <div class="order-pizza-background" id="pizza"></div>
+                    <h2 class="h2-margin">Pizza</h2>
+                </div>
+                <div class="order-render-pizza" id="render-pizza"></div>
+                <div class="order-Sushi">
+                    <div class="order-sushi-background" id="sushi"></div>
+                    <h2 class="h2-margin">Sushi</h2>
+                </div>
+                <div class="order-render-sushi" id="render-sushi"></div>
             </div>
         </div>
-        <div>
-
+        <div id="order-section" class="order-section menu-close">
+            <h2>Warenkorb</h2>
+            <div id="oders" class="orders"></div>
         </div>
     </div>
-    <div class="order-section">
-        <h2>Warenkorb</h2>
-    </div>
-    <footer>
 
+    <footer>
+        <p>footer</p>
     </footer>
 </body>
 </html>
