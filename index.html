@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BestellApp</title>
+    <link rel="icon" href="/img/icons/favicon-32x32.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body onload="loadDishes()">
-    <header>
+    <header id="header-top">
         <img class="logo" src="/img/icons/Logo.png" alt="">
         <img class="logo-menu" onclick="menu()" src="/img/icons/dropdown-menu.png" alt="">
     </header>
@@ -19,7 +20,7 @@
                 </div>
                 <div class="mp-infos">
                     <h2>Chicken Joe`s Chicken and more</h2>
-                    <div class="mp-chickenjoe"><img src="/img/background/chicken-joe.jpg" alt=""></div>
+                    <div class="mp-chickenjoe mp-chickenjoe-none"><img src="/img/background/chicken-joe.jpg" alt=""></div>
                     <p class="mp-reviews">Bewertungen ( 4.7 / 5 Sternen ) </p>
                     <div class="mp-links">
                         <img class="mp-arrow" src="/img/background/arrow-point-to-right.png" alt="">
@@ -48,6 +49,12 @@
         <div id="order-section" class="order-section menu-close">
             <h2>Warenkorb</h2>
             <div id="oders" class="orders"></div>
+        </div>
+    </div>
+
+    <div class="order-mockup mockup-close" id="mockup">
+        <div class="order-mockup-info">
+            <h1 class="order-mockup-headline">Deine Bestellung wurde abgeschickt!</h1>
         </div>
     </div>
 

@@ -149,13 +149,11 @@ function loadOrder(){
                         <sub class="order-section-costs-sub-bolt">${(deliveryCosts + costs).toFixed(2)} €</sub>
                     </div>
                 </div>
-                        <button onclick="deleteAll()" class="order-section-btn">Jetzt Bestellen</button>`;
+                        <a href="#header-top"><button onclick="deleteAll()" class="order-section-btn">Jetzt Bestellen</button></a>`;
 }}
 
 function pushDish(dishName,dishPrice,dishCounter) {
-
     let Dish = order.find(d => d.name === dishName);
-
     if (Dish) {
         Dish.counter++;
     }
@@ -189,9 +187,16 @@ function deleteDish(index){
 }
 
 function deleteAll(){
+    setTimeout(orderFinish, 2000);
     order = [];
-    
     loadOrder();
+    document.getElementById('order-section').classList.toggle('menu-close');
+    document.getElementById('main-page').classList.toggle('main-page-close');
+    document.getElementById('mockup').classList.toggle('mockup-close');
+}
+
+function orderFinish() {
+  document.getElementById('mockup').classList.toggle('mockup-close');
 }
 
 function menu(){
